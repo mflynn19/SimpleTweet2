@@ -29,10 +29,20 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:layout_constrainedWidth="true"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvUsername"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ivProfileImage"
+        app:layout_constraintTop_toBottomOf="@id/tvUsername"
         tools:text="This is a sample tweet of a very very long tweet thats more than 130 characters" />
+
+    <TextView
+        android:id="@+id/tvTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="5h"
+        app:layout_constraintBottom_toTopOf="@+id/tweetBody"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
