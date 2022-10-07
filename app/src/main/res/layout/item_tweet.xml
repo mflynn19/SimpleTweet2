@@ -27,6 +27,8 @@
         android:id="@+id/tweetBody"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:linksClickable="true"
         android:layout_margin="10dp"
         app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toEndOf="parent"
