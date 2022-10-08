@@ -34,7 +34,7 @@ class TimelineActivity : AppCompatActivity() {
             android.R.color.holo_red_light);
 
         rvTweets = findViewById(R.id.rvTweets)
-        adapter = TweetsAdapter(tweets)
+        adapter = TweetsAdapter(tweets, this)
         rvTweets.layoutManager = LinearLayoutManager(this)
         rvTweets.adapter = adapter
 
