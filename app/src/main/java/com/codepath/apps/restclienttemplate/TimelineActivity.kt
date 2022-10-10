@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.codepath.apps.restclienttemplate.models.Tweet
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import okhttp3.Headers
 import org.json.JSONException
 
@@ -27,14 +28,14 @@ class TimelineActivity : AppCompatActivity() {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    /*override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.compose){
             //Toast.makeText(this, "Ready to compose a tweet", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, ComposeActivity::class.java)
             startActivityForResult(intent, REQUEST_CODE)
         }
         return super.onOptionsItemSelected(item)
-    }
+    }*/
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE){
@@ -65,6 +66,12 @@ class TimelineActivity : AppCompatActivity() {
         adapter = TweetsAdapter(tweets, this)
         rvTweets.layoutManager = LinearLayoutManager(this)
         rvTweets.adapter = adapter
+
+        val btnCompose = findViewById<FloatingActionButton>(R.id.compose)
+        btnCompose.setOnClickListener {
+            val intent = Intent(this, ComposeActivity::class.java)
+            startActivityForResult(intent, REQUEST_CODE)
+        }
 
         populateTimeline()
 
