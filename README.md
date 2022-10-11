@@ -93,7 +93,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/mflynn19/SimpleTweet2/blob/master/walkthroughA.gif' width='' alt='Video Walkthrough' />
+<img src='https://github.com/mflynn19/SimpleTweet2/blob/master/walkthroughC.gif' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
